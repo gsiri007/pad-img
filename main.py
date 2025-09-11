@@ -5,7 +5,7 @@ import os
 def main():
     # command line argument parsing
     HELP_MESSAGE = '''
-                      bg-wall is a utility that converts your portrait 
+                      pad-img is a utility that converts your portrait 
                       images to a wallpaper with a specific background color.
                    '''
 
