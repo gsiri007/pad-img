@@ -9,14 +9,24 @@ Utility that converts portrait images to a wallpaper with a specific background 
 *   [bash]
 
 ## Getting Started
-* step 1
+* Local install
   ```bash
-    git clone 
+     git clone https://github.com/gsiri007/bg-wall.git
+     cd bg-wall
+     ./setup.sh
+  ```
+  * Docker install
+    ```bash
+       git clone https://github.com/gsiri007/bg-wall.git
+       cd bg-wall
+       ./docker-setup.sh
 
 
 ### Prerequisites
 
-List any software, tools, or dependencies required to run the project.
+* Local setup
+   * python
+   * pip
+* Docker setup
+   * Docker    
 
-* ```bash
-    npm install npm@latest -g
