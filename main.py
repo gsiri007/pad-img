@@ -1,5 +1,5 @@
-import sys
 import argparse
+from PIL import Image, ImageFile
 
 def main():
 
@@ -21,7 +21,19 @@ def main():
     OUTPUT_IMAGE = args.output
     IMAGE_BACKGROUND = args.background
 
-    print(INPUT_IMAGE, OUTPUT_IMAGE, IMAGE_BACKGROUND)
+    image_to_wallpaper(INPUT_IMAGE)
+
+def image_to_wallpaper(image: str):
+
+    try:
+        img = Image.open(image)
+        scaled_width = img.size[0]
+        scaled_height = 3000
+        scaled_size = (scaled_width, scaled_height)
+        scaled_img = img.resize(scaled_size, Image.Resampling.LANCZOS)
+
+    except OSError as e:
+        print(str(e))
 
 if __name__ == "__main__":
     main()
