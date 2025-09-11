@@ -1,6 +1,6 @@
 # bg-wall
 
-Utility that converts portrait images to a wallpaper with a specific background color
+Utility that converts portrait images to a wallpaper with a specific padding color
 
 ### Built With
 
@@ -35,6 +35,7 @@ Utility that converts portrait images to a wallpaper with a specific background 
 ## Build upon 
 
 * Python Imaging Library: [Pillow (PIL Fork)](https://pypi.org/project/pillow/)
+
 
 
 
