@@ -1,5 +1,5 @@
 import argparse
-from PIL import Image, ImageFile
+from PIL import Image, ImageOps
 
 def main():
 
@@ -21,9 +21,9 @@ def main():
     OUTPUT_IMAGE = args.output
     IMAGE_BACKGROUND = args.background
 
-    image_to_wallpaper(INPUT_IMAGE)
+    image_to_wallpaper(INPUT_IMAGE, IMAGE_BACKGROUND)
 
-def image_to_wallpaper(image: str):
+def image_to_wallpaper(image: str, bg_color: str):
 
     try:
         img = Image.open(image)
@@ -31,6 +31,11 @@ def image_to_wallpaper(image: str):
         scaled_height = 3000
         scaled_size = (scaled_width, scaled_height)
         scaled_img = img.resize(scaled_size, Image.Resampling.LANCZOS)
+
+        pad_size = (6000, scaled_height)
+        final_image = ImageOps.pad(scaled_img, pad_size, color=bg_color)
+
+        final_image.show()
 
     except OSError as e:
         print(str(e))
