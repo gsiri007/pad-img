@@ -16,7 +16,7 @@ def main():
 
     # optional arguments
     parser.add_argument('-o', '--output', type=str, default='output', help='output path/filename')
-    parser.add_argument('-b', '--background', type=str, default='black', help='background color')
+    parser.add_argument('-p', '--pad-color', type=str, default='black', help='background color')
     parser.add_argument('-f', '--format', type=str, default=None, help='output format [png, jpeg]')
 
     args = parser.parse_args()
@@ -24,7 +24,7 @@ def main():
 
     INPUT_IMAGE = args.image
     OUTPUT_IMAGE = args.output
-    BACKGROUND_COLOR = args.background
+    PAD_COLOR = args.background
     OUTPUT_FORMAT = args.format
 
     # checking if inside a docker container and setting the paths
@@ -37,7 +37,7 @@ def main():
         img = Image.open(INPUT_IMAGE)
 
         pad_size = (6000, 3000)
-        final_image = ImageOps.pad(img, pad_size, color=BACKGROUND_COLOR)
+        final_image = ImageOps.pad(img, pad_size, color=PAD_COLOR)
 
 
         if OUTPUT_FORMAT is None:
