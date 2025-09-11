@@ -4,7 +4,10 @@ import os
 
 def main():
     # command line argument parsing
-    HELP_MESSAGE = '--- USAGE DETAILS ---'
+    HELP_MESSAGE = '''
+                      bg-wall is a utility that converts your portrait 
+                      images to a wallpaper with a specific background color.
+                   '''
 
     parser = argparse.ArgumentParser(description=HELP_MESSAGE)
 
@@ -12,9 +15,9 @@ def main():
     parser.add_argument('image')
 
     # optional argumentsg
-    parser.add_argument('-o', '--output', type=str, default='output')
-    parser.add_argument('-b', '--background', type=str, default='black')
-    parser.add_argument('-f', '--format', type=str, default=None)
+    parser.add_argument('-o', '--output', type=str, default='output', help='output path/filename')
+    parser.add_argument('-b', '--background', type=str, default='black', help='background color')
+    parser.add_argument('-f', '--format', type=str, default=None, help='output format [png, jpeg]')
 
     args = parser.parse_args()
 
@@ -24,6 +27,7 @@ def main():
     BACKGROUND_COLOR = args.background
     OUTPUT_FORMAT = args.format
 
+    # checking if inside a docker container and setting the paths
     if os.environ.get("AM_I_IN_A_DOCKER_CONTAINER") == 'YES':
         INPUT_IMAGE = f"/tmp/{args.image}"
         OUTPUT_IMAGE = f"/tmp/{args.output}"
