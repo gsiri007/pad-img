@@ -1,5 +1,6 @@
 import argparse
 from PIL import Image, ImageOps
+import os
 
 def main():
     # command line argument parsing
@@ -17,10 +18,15 @@ def main():
 
     args = parser.parse_args()
 
+
     INPUT_IMAGE = args.image
     OUTPUT_IMAGE = args.output
     BACKGROUND_COLOR = args.background
     OUTPUT_FORMAT = args.format
+
+    if os.environ.get("AM_I_IN_A_DOCKER_CONTAINER") == 'YES':
+        INPUT_IMAGE = f"/tmp/{args.image}"
+        OUTPUT_IMAGE = f"/tmp/{args.output}"
 
     # creating the wallpaper
     try:
@@ -28,6 +34,7 @@ def main():
 
         pad_size = (6000, 3000)
         final_image = ImageOps.pad(img, pad_size, color=BACKGROUND_COLOR)
+
 
         if OUTPUT_FORMAT is None:
             final_image.save(f"{OUTPUT_IMAGE}.{str(img.format).lower()}", img.format)
