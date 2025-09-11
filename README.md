@@ -4,9 +4,9 @@ Utility that converts portrait images to a wallpaper with a specific padding col
 
 ### Built With
 
-*   [python]
-*   [Docker]
-*   [bash]
+*   python
+*   Docker
+*   bash
 
 ## Getting Started
 * Local install
@@ -35,6 +35,7 @@ Utility that converts portrait images to a wallpaper with a specific padding col
 ## Build upon 
 
 * Python Imaging Library: [Pillow (PIL Fork)](https://pypi.org/project/pillow/)
+
 
 
 
