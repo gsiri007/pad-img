@@ -6,7 +6,7 @@ def main():
     # command line argument parsing
     HELP_MESSAGE = '''
                       pad-img is a utility that converts your portrait 
-                      images to a wallpaper with a specific background color.
+                      images to a wallpaper with a specific padding color.
                    '''
 
     parser = argparse.ArgumentParser(description=HELP_MESSAGE)
