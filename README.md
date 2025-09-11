@@ -28,6 +28,10 @@ Utility that converts portrait images to a wallpaper with a specific background 
    * python
    * pip
 * Docker setup
-   * Docker    
+   * Docker
+
+## Build upon 
+
+* Python Imaging Library: [Pillow (PIL Fork)](https://pypi.org/project/pillow/)
 
 
