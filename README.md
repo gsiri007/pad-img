@@ -1,4 +1,4 @@
-# bg-wall
+# pad-img
 
 Utility that converts portrait images to a wallpaper with a specific padding color
 
@@ -35,6 +35,7 @@ Utility that converts portrait images to a wallpaper with a specific padding col
 ## Build upon 
 
 * Python Imaging Library: [Pillow (PIL Fork)](https://pypi.org/project/pillow/)
+
 
 
 
