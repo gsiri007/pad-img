@@ -15,12 +15,12 @@ Utility that converts portrait images to a wallpaper with a specific background 
      cd bg-wall
      ./setup.sh
   ```
-  * Docker install
-    ```bash
-       git clone https://github.com/gsiri007/bg-wall.git
-       cd bg-wall
-       ./docker-setup.sh
-
+* Docker install
+  ```bash
+     git clone https://github.com/gsiri007/bg-wall.git
+     cd bg-wall
+     ./docker-setup.sh
+  ```
 
 ### Prerequisites
 
@@ -29,4 +29,5 @@ Utility that converts portrait images to a wallpaper with a specific background 
    * pip
 * Docker setup
    * Docker    
+
 
