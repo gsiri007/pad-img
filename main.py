@@ -14,7 +14,7 @@ def main():
     # required argument -> image file to edit
     parser.add_argument('image')
 
-    # optional argumentsg
+    # optional arguments
     parser.add_argument('-o', '--output', type=str, default='output', help='output path/filename')
     parser.add_argument('-b', '--background', type=str, default='black', help='background color')
     parser.add_argument('-f', '--format', type=str, default=None, help='output format [png, jpeg]')
