@@ -19,6 +19,7 @@ Utility that converts portrait images to a wallpaper with a specific padding col
   ```bash
      git clone https://github.com/gsiri007/pad-img.git
      cd pad-img
+     chmod +x docker-setup.sh
      ./docker-setup.sh
   ```
 
@@ -35,6 +36,7 @@ Utility that converts portrait images to a wallpaper with a specific padding col
 ## Build upon 
 
 * Python Imaging Library: [Pillow (PIL Fork)](https://pypi.org/project/pillow/)
+
 
 
 
