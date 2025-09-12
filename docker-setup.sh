@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ "$SHELL" == "/usr/bin/bash" ]]; then
+if [[ "$SHELL" == "/usr/bin/bash" ]] || [[ "$SHELL" == "/bin/bash" ]]; then
 
     echo "--- Building docker image ---"
     docker image build -t pad-img .
@@ -14,7 +14,7 @@ if [[ "$SHELL" == "/usr/bin/bash" ]]; then
     
 fi 
 
-if [[ "$SHELL" == "/usr/bin/zsh" ]]; then
+if [[ "$SHELL" == "/usr/bin/zsh" ]] || [[ "$SHELL" == "/bin/zsh" ]]; then
 
     echo "--- Building docker image ---"
     docker image build -t pad-img .
