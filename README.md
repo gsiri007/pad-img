@@ -13,7 +13,9 @@ Utility that converts a portrait image to a wallpaper with a specific padding co
   ```bash
      git clone https://github.com/gsiri007/pad-img.git
      cd pad-img
-     ./setup.sh
+     python -m venv .venv
+     source .venv/bin/activate
+     pip install pillow 
   ```
 * Docker install
   ```bash
@@ -34,6 +36,7 @@ Utility that converts a portrait image to a wallpaper with a specific padding co
 ## Build upon 
 
 * Python Imaging Library: [Pillow (PIL Fork)](https://pypi.org/project/pillow/)
+
 
 
 
